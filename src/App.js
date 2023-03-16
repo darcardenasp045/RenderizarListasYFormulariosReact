@@ -33,7 +33,14 @@ export default function App() {
   return (
     <div className="App">
       {notas.map((note) => {
-        return <Note id={note.id} date={note.date} object={note.object} />;
+        return (
+          <Note
+            key={note.id}
+            id={note.id}
+            date={note.date}
+            object={note.object}
+          />
+        );
       })}
     </div>
   );
