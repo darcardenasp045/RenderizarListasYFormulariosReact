@@ -1,4 +1,5 @@
 import "./styles.css";
+import Note from "./Note.js";
 
 const notas = [
   {
@@ -15,21 +16,7 @@ export default function App() {
   if (typeof notas === undefined || notas === null) {
     return "no hay notas";
   }
-  const Note = ({ id, date, object }) => {
-    return (
-      <div>
-        <p>
-          {" "}
-          {id}
-          {date}
-        </p>
-        <p>
-          {object.hola}
-          {object.idd}
-        </p>
-      </div>
-    );
-  };
+
   return (
     <div className="App">
       {notas.map((note) => {
