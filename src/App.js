@@ -46,15 +46,7 @@ export default function App(props) {
               return nota.important === true;
             })
             .map((note) => {
-              return (
-                <Note
-                  key={note.id}
-                  id={note.id}
-                  date={note.date}
-                  content={note.content}
-                  important={note.important}
-                />
-              );
+              return <Note key={note.id} {...note} />;
             })}
         </ul>
       </ol>
