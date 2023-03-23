@@ -1,15 +1,13 @@
-const Note = ({ id, date, object }) => {
+const Note = ({ id, date, content, important }) => {
   return (
     <div>
       <p>
         {" "}
-        {id}
         {date}
+        {important}
       </p>
-      <p>
-        {object.hola}
-        {object.idd}
-      </p>
+      <p>{id}</p>
+      <strong>{content}</strong>
     </div>
   );
 };
